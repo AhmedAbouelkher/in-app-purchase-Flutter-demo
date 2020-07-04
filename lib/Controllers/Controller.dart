@@ -18,8 +18,9 @@ class InAppPurchase {
     return _inAppPurchaseInstance;
   }
 
-  Future<List<ProductDetails>> retrieveProducts(
-      {List<String> productsIDs,}) async {
+  Future<List<ProductDetails>> retrieveProducts({
+    List<String> productsIDs,
+  }) async {
     assert(_inAppPurchaseConnectionInstance != null);
     assert(_inAppPurchaseInstance != null);
     final bool available = await _inAppPurchaseConnectionInstance.isAvailable();
@@ -52,8 +53,7 @@ class InAppPurchase {
     final PurchaseParam purchaseParam = PurchaseParam(
       productDetails: productDetails,
     );
-    if (Platform.isIOS &&
-            productDetails.skProduct.subscriptionPeriod != null) {
+    if (Platform.isIOS && productDetails.skProduct.subscriptionPeriod != null) {
       _inAppPurchaseConnectionInstance.buyConsumable(
         purchaseParam: purchaseParam,
       );
@@ -87,6 +87,7 @@ class InAppPurchase {
 
     // TODO: record in the database
     if (purchase != null) {
+      //TODO: handle purchased item success
     } else {
       //TODO: handle user's never purchased situation
     }
@@ -100,11 +101,10 @@ class InAppPurchase {
     assert(_inAppPurchaseConnectionInstance != null);
     assert(_inAppPurchaseInstance != null);
     //TODO update the state of the consumable to a backend database
-      var res =
-          await _inAppPurchaseConnectionInstance.consumePurchase(purchase);
-      if (onConsume != null) onConsume(res);
-    }
+
+    assert(_pastPurchases != null);
+    PurchaseDetails purchase = _hasPurchased(product.id);
+    var res = await _inAppPurchaseConnectionInstance.consumePurchase(purchase);
+    if (onConsume != null) onConsume(res);
   }
-
-
 }

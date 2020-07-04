@@ -1,6 +1,8 @@
-# in_app_purchase
+# In-App-purchase with Flutter
 
 A new Flutter app.
+
+<img src="https://www.xda-developers.com/files/2018/02/Flutter-Framework-Feature-Image-Golden-Tainoi.png" width="600" height="400" alt="flutter">
 
 ## Getting Started
 
