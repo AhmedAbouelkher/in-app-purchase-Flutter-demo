@@ -1,18 +1,9 @@
-# In-App-purchase with Flutter
+# In-App-purchase Demo with Flutter
+ 
+A new Flutter project focuses on in-app-purchases with Google Play and App Store for non-consumable as well as consumable products (digital product/Currency).
 
-A new Flutter app.
+Subscription based in-app-purchases will be added soon.
 
-<img src="https://www.xda-developers.com/files/2018/02/Flutter-Framework-Feature-Image-Golden-Tainoi.png" width="600" height="400" alt="flutter">
+<img src="https://www.xda-developers.com/files/2018/02/Flutter-Framework-Feature-Image-Golden-Tainoi.png" width="800" height="533.3333333333" alt="Flutter">
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+> Please note that this project cannot be ran by its own, it's meant to be used as a reference to your future projects, more on that later.
